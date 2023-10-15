@@ -1,2 +1,2 @@
 # libuv
-Asynchronous programming in C
+Asynchronous programming in C. 
