@@ -1,13 +1,9 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(libuv VERSION 0.1.0)
+project(libuv-project VERSION 0.1.0)
 
-add_executable (server server.c)
-add_executable (client client.c)
-target_link_libraries (server uv)
-target_link_libraries (client uv)
+add_executable(network-dissector-final src/network_dissector.c)
+add_executable(timer src/timer.c)
+add_executable(tcp src/tcp_calculator.c)
 
-add_executable (timer timer.c)
-target_link_libraries (timer uv)
-
-add_executable(file-monitor file-monitor.c)
-target_link_libraries(file-monitor uv)
+target_link_libraries(tcp uv)
+target_link_libraries(timer uv)
